@@ -3,7 +3,7 @@
 GetX SnackBar, Dialog, BottomSheet
 
 ### GetX SnackBar
-<img src="https://user-images.githubusercontent.com/82430454/189580211-18358d13-5ab9-47ea-929f-5453a399748c.png" width="50%" height="20%">
+<img src="https://user-images.githubusercontent.com/82430454/189580211-18358d13-5ab9-47ea-929f-5453a399748c.png" width="50%" height="5%">
 
 ### GetX Dialog
 ![Simulator Screen Shot - iPhone 13 - 2022-09-12 at 10 52 20](https://user-images.githubusercontent.com/82430454/189580230-74ec8e99-e926-49f2-b245-f1ffbfd41665.png)
