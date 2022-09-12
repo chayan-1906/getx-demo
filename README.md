@@ -9,23 +9,10 @@ GetX SnackBar, Dialog, BottomSheet
      <td>GetX Dialog</td>
   </tr>
   <tr>
-    <td><img alt="GetX SnackBar" src="https://user-images.githubusercontent.com/82430454/189580211-18358d13-5ab9-47ea-929f-5453a399748c.png" width="20%"></td>
-    <td><img alt="GetX Dialog" src="https://user-images.githubusercontent.com/82430454/189580230-74ec8e99-e926-49f2-b245-f1ffbfd41665.png" width="20%"></td>
+    <td><img alt="GetX SnackBar" src="https://user-images.githubusercontent.com/82430454/189580211-18358d13-5ab9-47ea-929f-5453a399748c.png" width="50%"></td>
+    <td><img alt="GetX Dialog" src="https://user-images.githubusercontent.com/82430454/189580230-74ec8e99-e926-49f2-b245-f1ffbfd41665.png" width="50%"></td>
   </tr>
  </table>
-
-
-
-
-
-
-
-<p align="left">
-  <h3>GetX SnackBar</h3>
-  <img alt="GetX SnackBar" src="https://user-images.githubusercontent.com/82430454/189580211-18358d13-5ab9-47ea-929f-5453a399748c.png" width="20%">
-  <h3>GetX Dialog</h3>
-  <img alt="GetX Dialog" src="https://user-images.githubusercontent.com/82430454/189580230-74ec8e99-e926-49f2-b245-f1ffbfd41665.png" width="20%">
-</p>
 
 ### GetX Bottom Sheet
 <p align="left">
