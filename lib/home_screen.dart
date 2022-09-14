@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 
 import 'bottom_sheet_screen.dart';
@@ -19,12 +20,22 @@ class HomeScreen extends StatelessWidget {
           children: [
             /// snackbar
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
+              onPressed: () async {
+                /*Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const SnackBarScreen()),
-                );
+                );*/
+                // Get.to(
+                //   const SnackBarScreen(),
+                //   fullscreenDialog: true,
+                //   transition: Transition.zoom,
+                //   // duration: const Duration(milliseconds: 4000),
+                //   curve: Curves.bounceInOut,
+                //   arguments: 'Data from home screen',
+                // );
+                var data = await Get.to(() => SnackBarScreen());
+                print('The received data: $data');
               },
               child: const Text('SnackBar Screen'),
             ),

@@ -12,6 +12,9 @@ class SnackBarScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            if (Get.arguments != null) Text(Get.arguments),
+
+            /// show snackbar
             ElevatedButton(
               onPressed: () {
                 Get.snackbar(
@@ -76,7 +79,7 @@ class SnackBarScreen extends StatelessWidget {
                   showProgressIndicator: true,
                   progressIndicatorBackgroundColor: Colors.black,
                   progressIndicatorValueColor:
-                  const AlwaysStoppedAnimation<Color>(Colors.white),
+                      const AlwaysStoppedAnimation<Color>(Colors.white),
                   reverseAnimationCurve: Curves.bounceInOut,
                   snackbarStatus: (value) {
                     print(value);
@@ -91,6 +94,14 @@ class SnackBarScreen extends StatelessWidget {
                 );
               },
               child: const Text('Show Snackbar'),
+            ),
+
+            /// go back
+            ElevatedButton(
+              onPressed: () {
+                Get.back(result: 'This is from Snackbar Screen');
+              },
+              child: const Text('Go Back'),
             ),
           ],
         ),
