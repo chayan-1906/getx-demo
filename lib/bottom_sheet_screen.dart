@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BottomSheetScreen extends StatelessWidget {
+  static String bottomSheetRoute = '/bottom_sheet_screen';
+
   const BottomSheetScreen({Key? key}) : super(key: key);
 
   @override
@@ -55,6 +57,17 @@ class BottomSheetScreen extends StatelessWidget {
               },
               child: const Text('Bottom Sheet'),
             ),
+            if (Get.parameters['channel'] != null &&
+                Get.parameters['content'] != null)
+              Text(
+                'Channel name is: ${Get.parameters['channel']} and content is: ${Get.parameters['content']}',
+                style: const TextStyle(color: Colors.redAccent, fontSize: 30.0),
+              ),
+            if (Get.parameters['someValue'] != null)
+              Text(
+                Get.parameters['someValue']!,
+                style: const TextStyle(color: Colors.green, fontSize: 30.0),
+              ),
           ],
         ),
       ),

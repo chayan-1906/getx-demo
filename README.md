@@ -17,6 +17,7 @@ GetX SnackBar, Dialog, BottomSheet
 ### GetX Bottom Sheet
 <p align="left">
   <img alt="GetX Bottom Sheet Light" src="https://user-images.githubusercontent.com/82430454/189582162-1744cca1-d612-4ec9-a5cc-2537c91899ed.png" width="20%">
-&nbsp; &nbsp; &nbsp; &nbsp;
   <img alt="GetX Bottom Sheet Dark" src="https://user-images.githubusercontent.com/82430454/189582165-7affb283-0fb2-4627-a0a4-a1de050bfb93.png" width="20%">
 </p>
+
+https://user-images.githubusercontent.com/82430454/190140909-7c33a6b3-5a22-4098-aa0a-60804f2d4985.mp4

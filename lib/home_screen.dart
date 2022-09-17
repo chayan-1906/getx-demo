@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/snackbar_screen.dart';
+import 'package:getx_demo/unknown_route_screen.dart';
 
 import 'bottom_sheet_screen.dart';
 import 'dialog_screen.dart';
@@ -21,20 +22,15 @@ class HomeScreen extends StatelessWidget {
             /// snackbar
             ElevatedButton(
               onPressed: () async {
-                /*Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SnackBarScreen()),
-                );*/
-                // Get.to(
-                //   const SnackBarScreen(),
-                //   fullscreenDialog: true,
-                //   transition: Transition.zoom,
-                //   // duration: const Duration(milliseconds: 4000),
-                //   curve: Curves.bounceInOut,
-                //   arguments: 'Data from home screen',
-                // );
-                var data = await Get.to(() => SnackBarScreen());
+                Get.to(
+                  const SnackBarScreen(),
+                  fullscreenDialog: true,
+                  transition: Transition.zoom,
+                  // duration: const Duration(milliseconds: 4000),
+                  curve: Curves.bounceInOut,
+                  arguments: 'Data from home screen',
+                );
+                var data = await Get.to(() => const SnackBarScreen());
                 print('The received data: $data');
               },
               child: const Text('SnackBar Screen'),
@@ -56,13 +52,27 @@ class HomeScreen extends StatelessWidget {
             /// bottom sheet
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const BottomSheetScreen()),
-                );
+                // Get.toNamed(BottomSheetScreen.bottomSheetRoute);
+                /// push replacement
+                // Get.offNamed(BottomSheetScreen.bottomSheetRoute);
+
+                /// push replacement for all screens
+                // Get.offAllNamed(BottomSheetScreen.bottomSheetRoute);
+
+                /// to pass value to next screen via argument
+                // Get.toNamed("${BottomSheetScreen.bottomSheetRoute}?channel=Padmanabha Das&content=Flutter GetX");
+                Get.toNamed('${BottomSheetScreen.bottomSheetRoute}/1234');
               },
               child: const Text('Bottom Sheet Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// unknown route
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(UnknownRouteScreen.unknownRouteRoute);
+              },
+              child: const Text('Unknown Route Screen'),
             ),
             const SizedBox(height: 10.0),
           ],
