@@ -8,10 +8,15 @@ class CustomGetXController extends GetxController {
   //   student.name.value = student.name.value.toUpperCase();
   // }
   var student = Student(name: 'PDas', age: 22).obs;
+  var count = 0.obs;
 
   void convertToUpperCase() {
     student.update((std) {
       std?.name = std.name.toString().toUpperCase();
     });
+  }
+
+  void increment() {
+    count++;
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/custom_getx_controller.dart';
 
 class StateManagementScreen extends StatefulWidget {
   static String stateManagementRoute = '/state_management_screen';
@@ -25,15 +26,27 @@ class _StateManagementScreenState extends State<StateManagementScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(
+            /*Obx(
               () => Text(
                 'Count value is  $count',
                 style: const TextStyle(fontSize: 25.0),
               ),
+            ),*/
+            GetX<CustomGetXController>(
+              init: CustomGetXController(),
+              builder: (controller) {
+                return Text(
+                  'The value is ${controller.count}',
+                  style: const TextStyle(fontSize: 25.0),
+                );
+              },
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
-              onPressed: increment,
+              // onPressed: increment,
+              onPressed: () {
+                Get.find<CustomGetXController>().increment();
+              },
               child: const Text('Increment'),
             ),
           ],
