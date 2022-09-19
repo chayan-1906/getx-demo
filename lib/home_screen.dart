@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/snackbar_screen.dart';
+import 'package:getx_demo/state_management_screen.dart';
+import 'package:getx_demo/student_screen.dart';
 import 'package:getx_demo/unknown_route_screen.dart';
 
 import 'bottom_sheet_screen.dart';
@@ -73,6 +75,36 @@ class HomeScreen extends StatelessWidget {
                 Get.toNamed(UnknownRouteScreen.unknownRouteRoute);
               },
               child: const Text('Unknown Route Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// state management screen
+            ElevatedButton(
+              onPressed: () {
+                /*Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const StateManagementScreen();
+                  }),
+                );*/
+                Get.toNamed(StateManagementScreen.stateManagementRoute);
+              },
+              child: const Text('State Management Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// student screen
+            ElevatedButton(
+              onPressed: () {
+                /*Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const StudentScreen();
+                  }),
+                );*/
+                Get.toNamed(StudentScreen.studentRoute);
+              },
+              child: const Text('Student Screen'),
             ),
             const SizedBox(height: 10.0),
           ],

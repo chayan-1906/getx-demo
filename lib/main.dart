@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:getx_demo/bottom_sheet_screen.dart';
 import 'package:getx_demo/home_screen.dart';
 import 'package:getx_demo/snackbar_screen.dart';
+import 'package:getx_demo/state_management_screen.dart';
+import 'package:getx_demo/student_screen.dart';
 
 import 'unknown_route_screen.dart';
 
@@ -38,7 +40,18 @@ class MyApp extends StatelessWidget {
           transition: Transition.circularReveal,
           transitionDuration: const Duration(milliseconds: 400),
         ),*/
+        GetPage(
+          name: StateManagementScreen.stateManagementRoute,
+          page: () => const StateManagementScreen(),
+          transition: Transition.fadeIn,
+        ),
+        GetPage(
+          name: StudentScreen.studentRoute,
+          page: () => const StudentScreen(),
+          transition: Transition.cupertinoDialog,
+        ),
       ],
+
       /// TODO: Unknown Routes not working
       unknownRoute: GetPage(
         name: UnknownRouteScreen.unknownRouteRoute,
