@@ -32,7 +32,7 @@ class _StateManagementScreenState extends State<StateManagementScreen> {
                 style: const TextStyle(fontSize: 25.0),
               ),
             ),*/
-            GetX<CustomGetXController>(
+            GetBuilder<CustomGetXController>(
               init: CustomGetXController(),
               builder: (controller) {
                 return Text(
