@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
 import 'package:getx_demo/student_screen.dart';
+import 'package:getx_demo/unique_id_screen.dart';
 import 'package:getx_demo/unknown_route_screen.dart';
+import 'package:getx_demo/workers_screen.dart';
 
 import 'bottom_sheet_screen.dart';
 import 'dialog_screen.dart';
@@ -96,15 +98,27 @@ class HomeScreen extends StatelessWidget {
             /// student screen
             ElevatedButton(
               onPressed: () {
-                /*Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return const StudentScreen();
-                  }),
-                );*/
                 Get.toNamed(StudentScreen.studentRoute);
               },
               child: const Text('Student Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// unique id screen
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(UniqueIDScreen.uniqueIDRoute);
+              },
+              child: const Text('Unique ID Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// workers screen
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(WorkersScreen.workersRoute);
+              },
+              child: const Text('Workers Screen'),
             ),
             const SizedBox(height: 10.0),
           ],

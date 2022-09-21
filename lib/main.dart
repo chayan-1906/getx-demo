@@ -5,6 +5,8 @@ import 'package:getx_demo/home_screen.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
 import 'package:getx_demo/student_screen.dart';
+import 'package:getx_demo/unique_id_screen.dart';
+import 'package:getx_demo/workers_screen.dart';
 
 import 'unknown_route_screen.dart';
 
@@ -49,6 +51,16 @@ class MyApp extends StatelessWidget {
           name: StudentScreen.studentRoute,
           page: () => const StudentScreen(),
           transition: Transition.cupertinoDialog,
+        ),
+        GetPage(
+          name: UniqueIDScreen.uniqueIDRoute,
+          page: () => const UniqueIDScreen(),
+          transition: Transition.native,
+        ),
+        GetPage(
+          name: WorkersScreen.workersRoute,
+          page: () => const WorkersScreen(),
+          transition: Transition.downToUp,
         ),
       ],
 
