@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/bottom_sheet_screen.dart';
 import 'package:getx_demo/home_screen.dart';
+import 'package:getx_demo/internationalization_screen.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
 import 'package:getx_demo/student_screen.dart';
@@ -9,6 +10,7 @@ import 'package:getx_demo/unique_id_screen.dart';
 import 'package:getx_demo/workers_screen.dart';
 
 import 'unknown_route_screen.dart';
+import 'utils/messages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'GetX Demo',
       debugShowCheckedModeBanner: false,
+      translations: Messages(),
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
         primarySwatch: Colors.amber,
         appBarTheme: const AppBarTheme(elevation: 0.0, centerTitle: true),
@@ -61,6 +66,11 @@ class MyApp extends StatelessWidget {
           name: WorkersScreen.workersRoute,
           page: () => const WorkersScreen(),
           transition: Transition.downToUp,
+        ),
+        GetPage(
+          name: InternationalizationScreen.internationalizationRoute,
+          page: () => const InternationalizationScreen(),
+          transition: Transition.fade,
         ),
       ],
 

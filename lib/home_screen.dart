@@ -9,6 +9,7 @@ import 'package:getx_demo/workers_screen.dart';
 
 import 'bottom_sheet_screen.dart';
 import 'dialog_screen.dart';
+import 'internationalization_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -119,6 +120,16 @@ class HomeScreen extends StatelessWidget {
                 Get.toNamed(WorkersScreen.workersRoute);
               },
               child: const Text('Workers Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// internationalization screen
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    InternationalizationScreen.internationalizationRoute);
+              },
+              child: const Text('Internationalization Screen'),
             ),
             const SizedBox(height: 10.0),
           ],

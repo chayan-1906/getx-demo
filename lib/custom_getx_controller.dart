@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:get/get.dart';
 import 'package:getx_demo/student.dart';
 
@@ -59,5 +61,13 @@ class CustomGetXController extends GetxController {
       time: const Duration(seconds: 3),
     );
     super.onInit();
+  }
+
+  void changeLanguage({
+    required String languageCode,
+    required String countryCode,
+  }) {
+    var locale = Locale(languageCode, countryCode);
+    Get.updateLocale(locale);
   }
 }
