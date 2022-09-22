@@ -3,17 +3,24 @@ import 'package:get/get.dart';
 import 'package:getx_demo/bottom_sheet_screen.dart';
 import 'package:getx_demo/home_screen.dart';
 import 'package:getx_demo/internationalization_screen.dart';
-import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
 import 'package:getx_demo/student_screen.dart';
 import 'package:getx_demo/unique_id_screen.dart';
 import 'package:getx_demo/workers_screen.dart';
-
+import 'utils/service.dart';
+import 'getx_service_screen.dart';
 import 'unknown_route_screen.dart';
 import 'utils/messages.dart';
 
-void main() {
+void main() async {
+  await initServices();
   runApp(const MyApp());
+}
+
+Future<void> initServices() async {
+  print('Init Services...');
+  await Get.putAsync<Service>(() async => await Service());
+  print('All Services started');
 }
 
 class MyApp extends StatelessWidget {
@@ -71,6 +78,11 @@ class MyApp extends StatelessWidget {
           name: InternationalizationScreen.internationalizationRoute,
           page: () => const InternationalizationScreen(),
           transition: Transition.fade,
+        ),
+        GetPage(
+          name: GetXServiceScreen.getxServiceRoute,
+          page: () => const GetXServiceScreen(),
+          transition: Transition.rightToLeft,
         ),
       ],
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_demo/custom_getx_controller.dart';
+import 'package:getx_demo/utils/custom_getx_controller.dart';
 
 class WorkersScreen extends StatefulWidget {
   static String workersRoute = '/workers_screen';

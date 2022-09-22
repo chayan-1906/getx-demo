@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/getx_service_screen.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
 import 'package:getx_demo/student_screen.dart';
@@ -130,6 +131,15 @@ class HomeScreen extends StatelessWidget {
                     InternationalizationScreen.internationalizationRoute);
               },
               child: const Text('Internationalization Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// getx service screen
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(GetXServiceScreen.getxServiceRoute);
+              },
+              child: const Text('GetX Service Screen'),
             ),
             const SizedBox(height: 10.0),
           ],
