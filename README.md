@@ -20,4 +20,7 @@ GetX SnackBar, Dialog, BottomSheet
   <img alt="GetX Bottom Sheet Dark" src="https://user-images.githubusercontent.com/82430454/189582165-7affb283-0fb2-4627-a0a4-a1de050bfb93.png" width="20%">
 </p>
 
-https://user-images.githubusercontent.com/82430454/190140909-7c33a6b3-5a22-4098-aa0a-60804f2d4985.mp4
+### GetX Passing data from one screen to another screen
+<table>
+  <tr>https://user-images.githubusercontent.com/82430454/190140909-7c33a6b3-5a22-4098-aa0a-60804f2d4985.mp4</tr>
+</table>
