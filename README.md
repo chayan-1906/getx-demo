@@ -1,4 +1,4 @@
-# getx_demo
+# GetX Demo
 
 GetX SnackBar, Dialog, BottomSheet
 
