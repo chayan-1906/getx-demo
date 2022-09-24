@@ -24,6 +24,6 @@ GetX SnackBar, Dialog, BottomSheet
 <table>
   <tr>
     <video width="320" height="240" controls>
-      <source src="[movie.mp4](https://user-images.githubusercontent.com/82430454/190140909-7c33a6b3-5a22-4098-aa0a-60804f2d4985.mp4)" type="video/mp4">Passing data from one screen to another screen
+      <source src="https://user-images.githubusercontent.com/82430454/190140909-7c33a6b3-5a22-4098-aa0a-60804f2d4985.mp4" type="video/mp4">Passing data from one screen to another screen
     </video>
 </table>
