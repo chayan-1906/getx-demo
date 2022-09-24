@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:getx_demo/bottom_sheet_screen.dart';
 import 'package:getx_demo/home_screen.dart';
 import 'package:getx_demo/internationalization_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
+import 'package:getx_demo/storage_email_validation_screen.dart';
 import 'package:getx_demo/student_screen.dart';
 import 'package:getx_demo/unique_id_screen.dart';
 import 'package:getx_demo/workers_screen.dart';
@@ -12,8 +14,9 @@ import 'getx_service_screen.dart';
 import 'unknown_route_screen.dart';
 import 'utils/messages.dart';
 
-void main() async {
+Future<void> main() async {
   await initServices();
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -82,6 +85,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: GetXServiceScreen.getxServiceRoute,
           page: () => const GetXServiceScreen(),
+          transition: Transition.rightToLeft,
+        ),
+        GetPage(
+          name: StorageEmailValidationScreen.storageEmailValidationRoute,
+          page: () => const StorageEmailValidationScreen(),
           transition: Transition.rightToLeft,
         ),
       ],

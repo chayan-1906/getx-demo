@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_demo/getx_service_screen.dart';
 import 'package:getx_demo/snackbar_screen.dart';
 import 'package:getx_demo/state_management_screen.dart';
+import 'package:getx_demo/storage_email_validation_screen.dart';
 import 'package:getx_demo/student_screen.dart';
 import 'package:getx_demo/unique_id_screen.dart';
 import 'package:getx_demo/unknown_route_screen.dart';
@@ -140,6 +141,16 @@ class HomeScreen extends StatelessWidget {
                 Get.toNamed(GetXServiceScreen.getxServiceRoute);
               },
               child: const Text('GetX Service Screen'),
+            ),
+            const SizedBox(height: 10.0),
+
+            /// storage email validation screen
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(
+                    StorageEmailValidationScreen.storageEmailValidationRoute);
+              },
+              child: const Text('Storage Email Validation Screen'),
             ),
             const SizedBox(height: 10.0),
           ],
